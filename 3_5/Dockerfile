@@ -19,6 +19,7 @@ RUN wget https://dlcdn.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VER
 # Set environment variables for Spark
 ENV SPARK_HOME=/opt/spark
 ENV PATH=$PATH:$SPARK_HOME/bin
+ENV PATH=$PATH:/opt/spark/bin
 
 # Expose Spark-related ports
 EXPOSE 8080 8081 4040 6066 7077
