@@ -7,7 +7,6 @@ elif [ "$SPARK_MODE" == "worker" ]; then
     /opt/spark/sbin/start-slave.sh ${SPARK_MASTER_URL} && tail -f /opt/spark/logs/*.out
 elif [ "$SPARK_MODE" == "submit" ]; then
     echo "Spark submit mode is selected. Waiting for spark-submit command..."
-    sudo ln -s /opt/spark/bin/spark-submit spark-submit
     tail -f /dev/null
 else
     echo "Invalid SPARK_MODE: $SPARK_MODE"
